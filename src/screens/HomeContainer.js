@@ -1,14 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
-import { createAppContainer } from 'react-navigation';
-import { createDrawerNavigator } from 'react-navigation-drawer';
-import HomeScreen from './HomeScreen';
-
-const AppDrawerNavigator = createDrawerNavigator({
-    Home: HomeScreen
-});
-
-const AppDrawer = createAppContainer(AppDrawerNavigator);
+import { StyleSheet } from 'react-native';
+import AppDrawer from '../navigations/DrawerNavigation';
 
 export default class HomeContainer extends React.Component {
 
@@ -17,13 +9,10 @@ export default class HomeContainer extends React.Component {
     }
     render() {
         return (
-            <View style={styles.container}>
-                <AppDrawer/>
-            </View>
+            <AppDrawer />
         );
     }
 }
-
 
 const styles = StyleSheet.create({
     container: {
@@ -37,7 +26,7 @@ const styles = StyleSheet.create({
         marginRight: 20,
         marginTop: 20,
         color: '#69c1cc',
-        borderColor: 'gray', 
+        borderColor: 'gray',
         borderWidth: 1,
         borderRadius: 6,
         height: 40,
